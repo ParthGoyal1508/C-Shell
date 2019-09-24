@@ -23,5 +23,5 @@
 	* clear	                        -	Clear the screen
     * echo                          -   Normal functioning as in bash
 	* background processes can be run with & -	Get processes running in the background
-    * history                       -  Normal functioning as in bash
-    * history <num>                 - Display only latest <num> commands
+    * history                       -   Normal functioning as in bash
+    * history <num>                 -   Display only latest <num> commands

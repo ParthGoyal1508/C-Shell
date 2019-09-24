@@ -11,8 +11,11 @@ void checkingCompletionOfBackgroundProcess() {
             i--;
             for (int j = i + 1; j < noOfChildProcess; j++)
                 childProcess[j] = childProcess[j + 1];
+            Display();
+            fflush (stdout);
         }
     }
+    return;
 }
 
 void loop() {

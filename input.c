@@ -28,6 +28,7 @@ void clearInputCommands() {
 void takeInput(int x) {
     // take input
     processType = -1;
+    redirection = 0;
 
     char *str = malloc(sizeof(char) * 256);
     strcpy(str, commandArray[x]);
@@ -49,6 +50,13 @@ void takeInput(int x) {
         else
             processType = 0;
     }
+
+    for(int i=0;i<totalCommands;i++){
+        if((strcmp(inputCommands[i],"<")==0) || (strcmp(inputCommands[i],">")==0) || (strcmp(inputCommands[i],">>")==0))
+            redirection = 1;
+    }
+
     if (totalCommands > 0) storeCommandInHistory();
+
     return;
 }
